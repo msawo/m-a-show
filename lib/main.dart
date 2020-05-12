@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sound/flutter_sound.dart';
 
+final url = 'https://itsallwidgets.com/podcast/feed';
 void main() => runApp(MandAShow());
 
 class MandAShow extends StatelessWidget {
@@ -8,23 +9,32 @@ class MandAShow extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'The M&A Show',
-      home: HomePage(),
+      home: EpisodesPage(),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
+class EpisodesPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Container(),
+    );
+  }
+}
+
+class PlayerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: MaShowApp(),
+        child: Player(),
       ),
     );
   }
 }
 
-class MaShowApp extends StatelessWidget {
+class Player extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -115,8 +125,7 @@ class _PlayBackButtonState extends State<PlayBackButton> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Container(
-            width: 400,
-            child: Slider(value: _playPosition, onChanged: null)),
+            width: 400, child: Slider(value: _playPosition, onChanged: null)),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
