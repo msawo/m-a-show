@@ -3,7 +3,7 @@ import 'package:flutter_sound/flutter_sound.dart';
 import 'package:webfeed/webfeed.dart';
 import 'package:http/http.dart' as http;
 
-final url = 'https://itsallwidgets.com/podcast/feed';
+final url = 'https://doubleline.com/feed/podcast/';
 void main() => runApp(MandAShow());
 
 class MandAShow extends StatelessWidget {
@@ -55,7 +55,7 @@ class EpisodeListView extends StatelessWidget {
       children: rssFeed.items
           .map(
             (i) => ListTile(
-              title: Text(i.title),
+              title: Text(i.title, style: TextStyle(fontSize: 22),),
               subtitle: Text(
                 i.description,
                 maxLines: 3,
