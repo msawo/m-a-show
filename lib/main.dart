@@ -104,6 +104,7 @@ class Player extends StatelessWidget {
           flex: 9,
         ),
         Flexible(
+          // Add controls
           child: AudioControls(),
           flex: 2,
         ),
